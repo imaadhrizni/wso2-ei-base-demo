@@ -1,1 +1,0 @@
-<inboundEndpoint xmlns="http://ws.apache.org/ns/synapse" name="InputEP" sequence="" onError="" protocol="http" suspend="false"><parameters/></inboundEndpoint>

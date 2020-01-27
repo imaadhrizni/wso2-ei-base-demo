@@ -1,8 +1,0 @@
-map_S_Company_S_root = function(){ 
-var outputroot={};
-
-outputroot =  {};
-outputroot.Address =  {};
-return outputroot;
-};
-
