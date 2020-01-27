@@ -1,3 +1,6 @@
+*.tmp/
+*.etadata/
+
 # Compiled class file
 *.class
 
