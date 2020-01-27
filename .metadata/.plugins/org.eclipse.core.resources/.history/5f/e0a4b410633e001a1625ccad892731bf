@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/demo" name="DemoAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST GET" uri-template="/input">
+        <inSequence>
+            <validate cache-schema="true">
+                <schema key="conf:myresources/InputXMLSchema.xsd"/>
+                <on-fail>
+                    <log level="custom">
+                        <property name="validation failed" value="Validation failed ###"/>
+                        <property expression="$ctx:ERROR_MESSAGE" name="error_msg"/>
+                    </log>
+                </on-fail>
+            </validate>
+            <datamapper config="gov:datamapper/RequestXMLtoJSON.dmc" description="OriginalRequestToJSON" inputSchema="gov:datamapper/RequestXMLtoJSON_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/RequestXMLtoJSON_outputSchema.json" outputType="JSON" xsltStyleSheet="gov:datamapper/RequestXMLtoJSON_xsltStyleSheet.xml"/>
+            <enrich description="Store Incoming Payload">
+                <source clone="false" type="body"/>
+                <target property="ORGINAL_PAYLOAD" type="property"/>
+            </enrich>
+            <log level="custom">
+                <property expression="json-eval(ORGINAL_PAYLOAD.Email)" name="Converted XML Payload"/>
+            </log>
+            <!--             <property expression="$body//Company//Employee//Email" name="uri.var.emailId" scope="default" type="STRING"/> -->
+            <!--             <call> -->
+            <!--                 <endpoint key="EndpointOne"/> -->
+            <!--             </call> -->
+            <!--             <enrich> -->
+            <!--                 <source clone="true" type="body"/> -->
+            <!--                 <target property="ENDPOINT_ONE_RESPONSE" type="property"/> -->
+            <!--             </enrich> -->
+            <!--             <property expression="get-property('ENDPOINT_ONE_RESPONSE')" name="endpointOneResponse" scope="default" type="STRING"/> -->
+            <!--             <call> -->
+            <!--                 <endpoint key="EndpointTwo"/> -->
+            <!--             </call> -->
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

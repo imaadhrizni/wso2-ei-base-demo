@@ -1,0 +1,46 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "root",
+  "type" : "object",
+  "properties" : {
+    "FirstName" : {
+      "id" : "http://wso2jsonschema.org/FirstName",
+      "type" : "string"
+    },
+    "LastName" : {
+      "id" : "http://wso2jsonschema.org/LastName",
+      "type" : "string"
+    },
+    "ContactNo" : {
+      "id" : "http://wso2jsonschema.org/ContactNo",
+      "type" : "string"
+    },
+    "Email" : {
+      "id" : "http://wso2jsonschema.org/Email",
+      "type" : "string"
+    },
+    "Address" : {
+      "id" : "http://wso2jsonschema.org/Address",
+      "type" : "object",
+      "properties" : {
+        "City" : {
+          "id" : "http://wso2jsonschema.org/Address/City",
+          "type" : "string"
+        },
+        "State" : {
+          "id" : "http://wso2jsonschema.org/Address/State",
+          "type" : "string"
+        },
+        "Zip" : {
+          "id" : "http://wso2jsonschema.org/Address/Zip",
+          "type" : "string"
+        }
+      }
+    },
+    "InternalCompanyId" : {
+      "id" : "http://wso2jsonschema.org/InternalCompanyId",
+      "type" : "string"
+    }
+  }
+}

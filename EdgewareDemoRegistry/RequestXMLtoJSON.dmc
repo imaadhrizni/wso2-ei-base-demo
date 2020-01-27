@@ -1,0 +1,12 @@
+map_S_Company_S_root = function(){ 
+var outputroot={};
+
+outputroot =  {};
+outputroot.FirstName = inputCompany.Employee.FirstName;
+outputroot.Email = inputCompany.Employee.Email;
+outputroot.InternalCompanyId = DM_PROPERTIES.DEFAULT['ENDPOINT_ONE_RESPONSE'];
+return outputroot;
+};
+
+
+

@@ -1,0 +1,14 @@
+<Company>
+  <EXEmployee>
+      <FirstName>Imaad</FirstName>
+      <LastName>Rizni</LastName>
+      <ContactNo>1234567890</ContactNo>
+      <Email>imaad@wso2.com</Email>
+      <Address>
+           <City>Colombo</City>
+           <State>Western</State>
+           <Zip>12345</Zip>
+      </Address>
+  </EXEmployee>
+</Company>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="DemoAPI" groupId="com.example.EdgewareDemo.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/DemoAPI.xml</file>
+    </artifact>
+    <artifact name="EndpointTwo" groupId="com.example.EdgewareDemo.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/EndpointTwo.xml</file>
+    </artifact>
+    <artifact name="EndpointOne" groupId="com.example.EdgewareDemo.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/EndpointOne.xml</file>
+    </artifact>
+</artifacts>

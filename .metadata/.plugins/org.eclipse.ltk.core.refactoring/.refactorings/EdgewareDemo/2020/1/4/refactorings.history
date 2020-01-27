@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;EdgewareDemo/src/main/synapse-config/endpoints/InputEndpoint.xml&apos; to &apos;InputEP.xml&apos;" description="Rename resource &apos;InputEndpoint.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/synapse-config/endpoints/InputEndpoint.xml" name="InputEP.xml" stamp="1579758048473" updateReferences="true"/>
+</session>
